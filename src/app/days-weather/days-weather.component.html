@@ -1,0 +1,12 @@
+<section class="days-container">
+  <div class="day-container" *ngFor="let data of nextFiveDays">
+    <img src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png"
+         class="icon-view"
+         alt="icon-holder">
+    <div class="text-container">
+      <span class="day">{{data.day}}</span>
+      <span class="temp" *ngIf="!isFahrenheitSet">{{data.celsius.min | number: '1.0-0'}}/{{data.celsius.max | number: '1.0-0'}}°</span>
+      <span class="temp" *ngIf="isFahrenheitSet">{{data.fahrenheit.min | number: '1.0-0'}}/{{data.fahrenheit.max | number: '1.0-0'}}°</span>
+    </div>
+  </div>
+</section>

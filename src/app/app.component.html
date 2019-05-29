@@ -1,0 +1,13 @@
+<section class="container">
+  <button class="btn" (click)="requestWeatherData()" *ngIf="!isShowingDetails && !isLoading && !showLocationError">
+    Get the Weather
+  </button>
+  <span *ngIf="isLoading" class="loading">Locating</span>
+  <p *ngIf="showLocationError">
+    Unable to retrieve the information at this moment.
+  </p>
+  <section class="details-container" *ngIf="isShowingDetails">
+    <app-current-weather [currentWeather]="currentWeather"></app-current-weather>
+    <app-days-weather [nextFiveDays]="weatherData"></app-days-weather>
+  </section>
+</section>

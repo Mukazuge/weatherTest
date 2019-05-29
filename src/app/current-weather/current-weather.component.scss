@@ -1,0 +1,69 @@
+@import '../variables.scss';
+
+section {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+span {
+  color: white;
+}
+
+.big-text {
+  font-size: 50px;
+  line-height: 0.8;
+}
+
+.small-text {
+  font-size: 18px;
+}
+
+.big-icon {
+  margin-right: 5px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.temp-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container {
+  text-align: right;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-right: 1px solid $display-background-color;
+}
+
+.convert-btn {
+  cursor: pointer;
+  border-radius: 0;
+  background: whitesmoke;
+  color: $display-background-color;
+  transition: all .3s ease;
+
+  &:hover {
+    border: 1px solid $forecast-background-color-secondary;
+    background-color: $display-background-color;
+    color: white;
+  }
+}
+
+.active-btn {
+  border: 1px solid $forecast-background-color-secondary;
+  background-color: $display-background-color;
+  color: white;
+}
+
+.mr-1 {
+  margin-right: 2px;
+}

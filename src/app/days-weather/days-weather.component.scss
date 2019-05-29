@@ -1,0 +1,47 @@
+@import '../variables';
+
+span {
+  text-align: center;
+}
+
+.days-container {
+  display: flex;
+  height: 45%;
+  justify-content: space-evenly;
+}
+
+.day-container {
+  border: 1px solid black;
+  flex: 1;
+  font-weight: 400;
+  background-color: $forecast-background-color-secondary;
+  color: black;
+  padding: 0 3px;
+  line-height: 1.2;
+
+  &:nth-child(odd) {
+    background-color: $forecast-background-color;
+    color: white;
+  }
+
+  .day {
+    font-size: 16px;
+  }
+
+  .temp {
+    font-size: 12px;
+  }
+
+  .text-container {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .icon-view {
+    width: 100%;
+    height: auto;
+  }
+}

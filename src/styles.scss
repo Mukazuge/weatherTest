@@ -1,0 +1,9 @@
+@import './app/variables.scss';
+
+body {
+  font-family: $font-family;
+}
+
+span, button, p {
+  font-weight: 600;
+}

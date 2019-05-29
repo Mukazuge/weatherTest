@@ -1,0 +1,16 @@
+<section>
+  <div class="details-header">
+    <img class="big-icon" src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon-holder">
+    <div class="temp-container">
+      <span class="big-text" *ngIf="!isFahrenheitSet">{{celsius.day | number: '1.0-0'}}°</span>
+      <span class="big-text" *ngIf="isFahrenheitSet">{{fahrenheit.day | number: '1.0-0'}}°</span>
+      <span class="small-text" *ngIf="!isFahrenheitSet">{{celsius.min | number: '1.0-0'}} / {{celsius.max | number: '1.0-0'}}°</span>
+      <span class="small-text" *ngIf="isFahrenheitSet">{{fahrenheit.min | number: '1.0-0'}} / {{fahrenheit.max | number: '1.0-0'}}°</span>
+    </div>
+  </div>
+
+  <div class="buttons-container">
+    <button class="celsius convert-btn mr-1" [ngClass]="{'active-btn': !isFahrenheitSet}" (click)="convertTo('celsius')">C</button>
+    <button class="fahrenheit convert-btn" [ngClass]="{'active-btn': isFahrenheitSet}" (click)="convertTo('fahrenheit')">F</button>
+  </div>
+</section>
