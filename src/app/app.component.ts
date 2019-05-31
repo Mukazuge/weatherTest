@@ -34,9 +34,7 @@ export class AppComponent implements OnInit {
       const currentWeatherRequest = this.weatherService.getCurrentWeather(position.coords);
 
       forkJoin([forecastRequest, currentWeatherRequest]).subscribe((res: any) => {
-        const [forecast, today] = res;
-        const forecastResponse = forecast;
-        const currentWeatherResponse = today;
+        const [forecastResponse, currentWeatherResponse] = res;
 
         this.weatherData = forecastResponse.list;
         this.currentWeather = currentWeatherResponse;
